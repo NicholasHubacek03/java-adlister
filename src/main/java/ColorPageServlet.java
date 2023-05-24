@@ -6,14 +6,9 @@ import java.io.IOException;
 @WebServlet(name = "ColorPageServlet", value = "/viewcolor")
 public class ColorPageServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        request.setAttribute("mycolor",request.getAttribute("mycolor"));
-        request.getRequestDispatcher("colorviewer.jsp").forward(request,response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String color = req.getParameter("color");
+        req.setAttribute("color", color);
+        req.getRequestDispatcher("/colorviewer.jsp").forward(req, resp);
     }
 }

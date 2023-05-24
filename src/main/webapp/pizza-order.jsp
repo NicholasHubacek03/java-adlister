@@ -9,10 +9,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Pizza</title>
 </head>
 <body>
-<form action="/PizzaOrderServlet" method="post">
+<form action="/pizza-order-submit" method="post">
   <label for="crust">Crust Type:</label>
   <select id="crust" name="crust">
     <option value="thin">Thin Crust</option>
